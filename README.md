@@ -9,8 +9,8 @@ PowerShell 작업은 4단계로 진행됩니다.
 1. Snapshot에서 Managed Disk 만들기 
 1. VM 만들기
 
-* PowerShell
-* Azure CLI
+* [PowerShell](https://github.com/ilseokoh/azuresnapshot2vm/blob/master/powershell/snapshot2vm.ps1)
+* [Azure CLI](https://github.com/ilseokoh/azuresnapshot2vm/blob/master/cli/snapshot2vm_cli.md)
 
 PowerShell로 진행하려면 
 Azure PowerShell Resource Manager modules의 최신버전이 필요합니다. (2017-03-13 현재 3.7.0) 설치 방법은 1) [MSI 설치파일](https://github.com/Azure/azure-powershell/releases/download/v3.7.0-March2017/azure-powershell.3.7.0.msi) 2) [Microsoft Web Platform Installer](http://aka.ms/webpi-azps) 3) Windows PowerShell을 관리자 모드로 실행하고 > Install-Module AzureRM 실행 

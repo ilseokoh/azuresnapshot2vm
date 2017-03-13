@@ -3,8 +3,6 @@
 ### 로그인
 <pre><code>
 > az login
-
-To sign in, use a web browser to open the page https://aka.ms/devicelogin and enter the code G5Q32345D to authenticate.
 </code></pre>
 
 로그인을 위해서 https://aka.ms/devicelogin 로 접속하고 Code를 입력하여 로그인 한다. 
