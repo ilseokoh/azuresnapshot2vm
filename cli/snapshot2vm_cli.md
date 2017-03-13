@@ -12,7 +12,7 @@
 > az snapshot list
 </code></pre>
 
-Sanpshot의 ID를 확인한다. 이 아이디를 확인하는 이유는 snapshot이 별도의 리소스 그룹에 있을 때 필요하다. VM과 Snapshot이 모두 같은 리소스 그룹에 있다면 넘어가도 된다. 
+Sanpshot의 ID를 확인한다. 이 아이디를 확인하는 이유는 snapshot이 별도의 리소스 그룹에 있을 때 필요하다. Snapshot이 새로 생성할 VM의 리소스 그룹과 같다면 넘어가도 된다. 
 
 ### Public IP 만들기 
 <pre><code>

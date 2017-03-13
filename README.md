@@ -5,9 +5,9 @@ Azure의 Managed Disk는 Snapshot을 만들어 특정 시점의 백업을 만들
 
 PowerShell 작업은 4단계로 진행됩니다. 
 1. Snapshot / 가상네트워크 / 서브넷 가져오기 
-1. Public IP / NIC(Network Interface Card) 만들기 
-1. Snapshot에서 Managed Disk 만들기 
-1. VM 만들기
+2. Public IP / NIC(Network Interface Card) 만들기 
+3. Snapshot에서 Managed Disk 만들기 
+4. VM 만들기
 
 * [PowerShell](https://github.com/ilseokoh/azuresnapshot2vm/blob/master/powershell/snapshot2vm.ps1)
 * [Azure CLI](https://github.com/ilseokoh/azuresnapshot2vm/blob/master/cli/snapshot2vm_cli.md)
