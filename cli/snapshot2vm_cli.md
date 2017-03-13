@@ -22,7 +22,7 @@ Sanpshot의 ID를 확인한다. 이 아이디를 확인하는 이유는 snapshot
 
 ### 새로운 NIC(Network Interface Card) 만들기 
 <pre><code>
-> az network nic create --resource-group ManagedDiskGroup --location koreacentral --name VM3NIC --vnet-name ManagedDiskGroup-vnet --subnet default 
+> az network nic create --resource-group ManagedDiskGroup --location koreacentral --name VM3NIC --vnet-name ManagedDiskGroup-vnet --subnet default --public-ip-address VM3PIP
 </code></pre>
 새로운 VM에 사용할 NIC를 만든다. 
 
