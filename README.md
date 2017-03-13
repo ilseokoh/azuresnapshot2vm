@@ -16,4 +16,4 @@ PowerShell로 진행하려면
 Azure PowerShell Resource Manager modules의 최신버전이 필요합니다. (2017-03-13 현재 3.7.0) 설치 방법은 1) [MSI 설치파일](https://github.com/Azure/azure-powershell/releases/download/v3.7.0-March2017/azure-powershell.3.7.0.msi) 2) [Microsoft Web Platform Installer](http://aka.ms/webpi-azps) 3) Windows PowerShell을 관리자 모드로 실행하고 > Install-Module AzureRM 실행 
 
 Azure CLI로 진행하려면 
-Azure CLI 최신버전이 필요합니다. 설치방법은 [Azure CLI 설치](https://docs.microsoft.com/ko-kr/azure/xplat-cli-install)문서를 참조 바랍니다. 
+Azure CLI 2.0이 필요합니다. 설치방법은 [Install Azure CLI 2.0](https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli)문서를 참조 바랍니다. 

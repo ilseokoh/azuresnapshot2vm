@@ -24,7 +24,7 @@ $subnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Nam
 # Public IP 만들기 
 $pipName = $vmName + "PIP"
 $pip = New-AzureRmPublicIpAddress -Name $pipName -ResourceGroupName $rgName -Location $location -AllocationMethod Dynamic
-# 새로운 Network Interface Card 만들기 
+# 새로운 NIC(Network Interface Card) 만들기 
 $nicName = $vmName + "NIC"
 $nic = New-AzureRmNetworkInterface -Name $nicName -ResourceGroupName $rgName -Location $location -SubnetId $subnetConfig.Id -PublicIpAddressId $pip.Id
 
