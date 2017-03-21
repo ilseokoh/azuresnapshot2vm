@@ -12,6 +12,7 @@ $vmName = 'VM2'
 
 $vnetName = "ManagedDiskGroup-vnet"
 $subnetName = "default"
+$avsetName = "ManagedAVSet"
 
 # Snapshot 가져오기 
 $snapshot = Get-AzureRmSnapshot -SnapshotName $snapshotName -ResourceGroupName $snapshotRGName
@@ -19,6 +20,8 @@ $snapshot = Get-AzureRmSnapshot -SnapshotName $snapshotName -ResourceGroupName $
 $vnet = Get-AzureRmVirtualNetwork -ResourceGroupName $rgName -Name $vnetName
 # 가상네트워크 서브넷 가져오기 
 $subnetConfig = Get-AzureRmVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $frontendSubnetName
+# 가용성 집합 가져오기
+$avset = Get-AzureRmAvailabilitySet -ResourceGroupName $rgName -Name $avsetName
 
 
 # Public IP 만들기 
@@ -41,7 +44,7 @@ $osDisk = New-AzureRmDisk -DiskName $diskName -Disk $diskConfig -ResourceGroupNa
 # 새로운 VM 만들기 위한 준비 
 $vmSize = 'Standard_DS2_v2' # 'StandardLRS'
 $diskCreateOption = 'Attach'
-$vm = New-AzureRmVMConfig -VMName $vmName -VMSize $vmSize
+$vm = New-AzureRmVMConfig -VMName $vmName -VMSize $vmSize -AvailabilitySetId $avset.Id
 $vm = Add-AzureRmVMNetworkInterface -VM $vm -Id $nic.Id
 $vm = Set-AzureRmVMOSDisk -VM $vm -Name $diskName -ManagedDiskId $osDisk.Id -CreateOption $diskCreateOption -Windows -Caching ReadWrite
 
